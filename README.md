@@ -1,13 +1,7 @@
 # quest-template
 
 ## Quest Details 
-#### title: To the Cloud and Beyond
-Get the wrench
-And BEYOND
-Bring your own parachute
-The sky is NOT the limit
-No one can hear you scream
-
+#### title: To the Cloud and Beyond: The sky is NOT the limit
 
 
 #### level: Beginner
