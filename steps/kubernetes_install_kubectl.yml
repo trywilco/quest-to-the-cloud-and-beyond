@@ -1,0 +1,39 @@
+id: kubernetes_install_kubectl
+learningObjectives: 
+- Install kubectl
+hints:
+- To install kubectl on codespaces, follow the instructions for Linux Debian-based distributions
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: devops
+      messages:
+      - text: "Now it is time to deploy to our Kubernetes cluster. You must be wondering how are we going to do that."
+        delay: 1200        
+      - text: "Well, the first thing you need is to install [kubectl](https://kubernetes.io/docs/tasks/tools/). We use kubectl run commands against the Kubernetes cluster."
+        delay: 1000
+      - text: "It will all make sense really soon. But first, make sure kubectl is installed and working. Run `kubectl help` and make sure the list of supported commands is printed."
+        delay: 1000
+      - text: "Let me know once you finished intalling and ready to continue"
+        delay: 800
+                
+trigger:
+  type: user_message
+  params:
+    person: devops
+  flowNode:
+    if:
+      conditions:
+        - conditionId: is_user_message_text_ready_to_continue
+      then:
+        do:
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Umm, If you need any help, just let me know that you’re stuck. If that’s not the case - take your time and tell me once you're ready :)
+                delay: 1000
