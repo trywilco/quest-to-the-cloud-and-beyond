@@ -16,7 +16,7 @@ startFlow:
         delay: 800
       - text: Second, path to chart directory. You have a prepared directory in the project root folder
         delay: 800
-      - text: And last, set the values `frontend.image.tag` and `backend.image.tag` used by Helm Charts to be `${user.repoName}-latest`. This tells the deployment to use images that were already uploaded for you to our registry.
+      - text: And last, set the values `frontend.image.tag` and `backend.image.tag` used by Helm Charts to be `${Lodash.replace(Lodash.replace(user.repository, 'https://github.com/',''), "/", "-")}-latest`. This tells the deployment to use images that were already uploaded for you to our registry.
         delay: 800
       - text: If all goes well you should be able to access the application using the Ingress that is connected to the frontend
         delay: 1000
