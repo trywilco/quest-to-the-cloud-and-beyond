@@ -1,6 +1,6 @@
 id: kubernetes_install_kubectl
 learningObjectives: 
-- Install kubectl
+- Installing kubectl
 hints:
 - To install kubectl on codespaces, follow the instructions for Linux Debian-based distributions
 startFlow:
@@ -15,7 +15,7 @@ startFlow:
         delay: 1000
       - text: "It will all make sense really soon. But first, make sure kubectl is installed and working. Run `kubectl help` and make sure the list of supported commands is printed."
         delay: 1000
-      - text: "Let me know once you finished intalling and ready to continue"
+      - text: ":instruction[Let me know once you finished installing and ready to continue]"
         delay: 800
                 
 trigger:

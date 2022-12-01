@@ -1,44 +1,37 @@
 id: kubernetes_install_helm
 learningObjectives: 
-- Analyzing log data 
+- Installing Helm
 hints:
-- Try to find what all the users that drop in the funnel have in common
+- Follow the [installation instructions](https://helm.sh/docs/intro/install/) according to the operatin system. Follow the Debian/Ubuntu instructions to install on Codespaces.
 startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: devops
       messages:
-      - text: "So, We've identified a very concerning drop on our website. Hereâ€™s a data dump of our analytics with the recent traffic and churned users. Can you please have a look, identify the problem, and fix it? [You can find the dump here](https://drive.google.com/file/d/1ax-K7cpTp24fDZaNZNRINX3FJT6BiDv6/view)."
-        delay: 2000
-      - text: "Once youâ€™ve found it, please drop me a message here and let me know what type of users are dropping - so we'll be able to understand the impact and start working on a solution."
-        delay: 3500
+      - text: "It is time to deploy. We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to Kubernetes."
+        delay: 1500
+      - text: "First, we need to [install Helm](https://helm.sh/docs/intro/install/). Run `helm version` to verify Helm is installed"
+        delay: 1500
+      - text: ":instruction[Let me know once you finished installing and ready to continue]"
+        delay: 1200
+        
 trigger:
   type: user_message
-  params: 
-    person: keen
+  params:
+    person: devops
   flowNode:
     if:
       conditions:
-      - conditionId: text_match_regex
-        params:
-          text: "${userMessageText}"
-          regex: mobile|android|ios|iphobe|non web
-          flags: i
+        - conditionId: is_user_message_text_ready_to_continue
       then:
         do:
-        - actionId: bot_message
-          params:
-            person: keen
-            messages:
-            - text: Good catch! I'll let the support team know.
-              delay: 1300
-        - actionId: finish_step
+          - actionId: finish_step
       else:
         do:
-        - actionId: bot_message
-          params:
-            person: keen
-            messages:
-            - text: Try again! I'm sure you'll figure this out.
-              delay: 2500
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Umm, If you need any help, just let me know that youÕre stuck. If thatÕs not the case - take your time and tell me once you're ready :)
+                delay: 1000
