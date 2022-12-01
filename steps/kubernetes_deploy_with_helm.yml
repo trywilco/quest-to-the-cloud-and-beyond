@@ -31,7 +31,7 @@ trigger:
       - conditionId: text_match_regex
         params:
           text: ${href}
-          regex: "sfsdf"
+          regex: ^https://anythink-market-
       then:    
         do:
         - actionId: bot_message
