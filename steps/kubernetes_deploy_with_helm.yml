@@ -1,44 +1,44 @@
 id: kubernetes_deploy_with_helm
 learningObjectives: 
-- Analyzing log data 
+- Use Helm to deploy to the Kubernetes cluster
 hints:
-- Try to find what all the users that drop in the funnel have in common
+- The command structure should be `helm install <release-name> <chart-dir> < --set key=value >`
+- You can retreive the Ingress using kubectl
 startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: devops
       messages:
-      - text: "So, We've identified a very concerning drop on our website. Here’s a data dump of our analytics with the recent traffic and churned users. Can you please have a look, identify the problem, and fix it? [You can find the dump here](https://drive.google.com/file/d/1ax-K7cpTp24fDZaNZNRINX3FJT6BiDv6/view)."
-        delay: 2000
-      - text: "Once you’ve found it, please drop me a message here and let me know what type of users are dropping - so we'll be able to understand the impact and start working on a solution."
-        delay: 3500
+      - text: "Good. Now you need to run `helm install`. You need to pass a few paramaters to the command:"
+        delay: 1200
+      - text: First, the release name. Choose whatever you want. `anythink-market` would be a great choice.'
+        delay: 800
+      - text: Second, path to chart directory. You have a prepared directory in the project root folder
+        delay: 800
+      - text: And last, set the values `frontend.image.tag` and `backend.image.tag` used by Helm Charts to be `${user.repoName}-latest`. This tells the deployment to use images that were already uploaded for you to our registry.
+        delay: 800
+      - text: If all goes well you should be able to access the application using the Ingress that is connected to the frontend
+        delay: 1000
+      - text: ":instruction[load any page in your frontend to continue]"
+        delay: 500      
+        
 trigger:
-  type: user_message
-  params: 
-    person: keen
+  type: local_page_load
   flowNode:
     if:
       conditions:
       - conditionId: text_match_regex
         params:
-          text: "${userMessageText}"
-          regex: mobile|android|ios|iphobe|non web
-          flags: i
-      then:
+          text: ${href}
+          regex: "sfsdf"
+      then:    
         do:
         - actionId: bot_message
           params:
-            person: keen
+            person: devops
             messages:
-            - text: Good catch! I'll let the support team know.
-              delay: 1300
+            - text: It is suprising but it seems that everything is working as expected.
+              delay: 2000
         - actionId: finish_step
-      else:
-        do:
-        - actionId: bot_message
-          params:
-            person: keen
-            messages:
-            - text: Try again! I'm sure you'll figure this out.
-              delay: 2500
+        

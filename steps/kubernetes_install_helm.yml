@@ -11,7 +11,7 @@ startFlow:
       messages:
       - text: "It is time to deploy. We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to Kubernetes."
         delay: 1500
-      - text: "First, we need to [install Helm](https://helm.sh/docs/intro/install/). Run `helm version` to verify Helm is installed"
+      - text: "First, we need to [install Helm](https://helm.sh/docs/intro/install/). Run `helm version` after the installation to verify it was uccessful"
         delay: 1500
       - text: ":instruction[Let me know once you finished installing and ready to continue]"
         delay: 1200
