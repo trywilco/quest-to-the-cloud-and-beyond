@@ -31,7 +31,7 @@ trigger:
         do:
           - actionId: bot_message
             params:
-              person: head-of-rd
+              person: devops
               messages:
               - text: Umm, If you need any help, just let me know that you’re stuck. If that’s not the case - take your time and tell me once you're ready :)
                 delay: 1000
