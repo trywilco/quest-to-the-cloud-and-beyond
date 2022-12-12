@@ -3,7 +3,7 @@ learningObjectives:
 - Use Helm to deploy to the Kubernetes cluster
 hints:
 - The command structure should be `helm install <release-name> <chart-dir> < --set key=value >`
-- You can retreive the Ingress using kubectl
+- You can retreive the Ingress using kubectl. Try running the command `kubectl get ingress`
 startFlow:
   do:
   - actionId: bot_message

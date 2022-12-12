@@ -11,8 +11,10 @@ startFlow:
       messages:
       - text: "It is time to deploy. We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to Kubernetes."
         delay: 1500
-      - text: "First, we need to :instruction[[install Helm](https://helm.sh/docs/intro/install/.)]" 
+      - text: "First, we need to :instruction[[install Helm](https://helm.sh/docs/intro/install/)]"
         delay: 500
+      - text: You should be able to run `helm` without `sudo`. If you use the `get_helm.sh` script, make sure to pass `--no-sudo` as argument.
+        delay: 700
       - text: :instruction[Run `helm version` after the installation to verify it was successful.]
         delay: 1500
       - text: :instruction[**Let me know once you've finished installing and you're ready to continue.**]
