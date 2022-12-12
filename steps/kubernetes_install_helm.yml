@@ -2,7 +2,7 @@ id: kubernetes_install_helm
 learningObjectives: 
 - Installing Helm
 hints:
-- Follow the [installation instructions](https://helm.sh/docs/intro/install/) according to the operatin system. Follow the Debian/Ubuntu instructions to install on Codespaces.
+- Follow the [installation instructions](https://helm.sh/docs/intro/install/) according to the operating system. Follow the Debian/Ubuntu instructions to install on Codespaces.
 startFlow:
   do:
   - actionId: bot_message
@@ -11,9 +11,11 @@ startFlow:
       messages:
       - text: "It is time to deploy. We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to Kubernetes."
         delay: 1500
-      - text: "First, we need to [install Helm](https://helm.sh/docs/intro/install/). Run `helm version` after the installation to verify it was uccessful"
+      - text: "First, we need to :instruction[[install Helm](https://helm.sh/docs/intro/install/.)]" 
+        delay: 500
+      - text: :instruction[Run `helm version` after the installation to verify it was successful.]
         delay: 1500
-      - text: ":instruction[Let me know once you finished installing and ready to continue]"
+      - text: :instruction[**Let me know once you've finished installing and you're ready to continue.**]
         delay: 1200
         
 trigger:
@@ -33,5 +35,5 @@ trigger:
             params:
               person: devops
               messages:
-              - text: Umm, If you need any help, just let me know that you’re stuck. If that’s not the case - take your time and tell me once you're ready :)
+              - text: Umm, If you need any help, just let me know that you're stuck. If that's not the case - take your time and tell me once you're ready :)
                 delay: 1000
