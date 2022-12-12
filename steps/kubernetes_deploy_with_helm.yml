@@ -20,7 +20,7 @@ startFlow:
         delay: 800
       - text: If all goes well you should be able to access the application using the **[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** that is connected to the frontend.
         delay: 1000
-      - text: ":instruction[Load any page in your frontend to continue.]"
+      - text: ":instruction[**Load any page in your frontend to continue.**]"
         delay: 500      
         
 trigger:
