@@ -13,7 +13,7 @@ startFlow:
         delay: 1500
       - text: "First, we need to [install Helm](https://helm.sh/docs/intro/install/). instruction:[Run `helm version` after the installation to verify it was successful.]"
         delay: 1500
-      - text: ":instruction[Let me know once you've finished installing and you're ready to continue.]"
+      - text: ":instruction[**Let me know once you've finished installing and you're ready to continue.**]"
         delay: 1200
         
 trigger:
