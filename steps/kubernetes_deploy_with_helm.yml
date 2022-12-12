@@ -10,7 +10,7 @@ startFlow:
     params:
       person: devops
       messages:
-      - text: Good. Now you need to :instruction[run `helm install`]. You need to pass a few paramaters to the command:
+      - text: "Good. Now you need to :instruction[run `helm install`]. You need to pass a few paramaters to the command:"
         delay: 1200
       - text: First, **the release name**. Choose whatever you want. `anythink-market` would be a great choice.
         delay: 800
