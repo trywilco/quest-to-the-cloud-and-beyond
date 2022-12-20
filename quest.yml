@@ -1,6 +1,6 @@
 id: kubernetes
 title: To the Cloud and Beyond
-description: "Your quest, should you choose to accept it, is to deploy an application to the cloud using Kubernetes and Helm. To begin your quest, you will need to install kubectl update the Kuburenetes kubeconfig file so you can access and manage the Kubernetes cluster. Next, you will need to install Helm on your local machine and set up a local repository for your application. With persistence and determination, you will be able to successfully package and deploy your application to the cloud."
+description: "Your quest, should you choose to accept it, is to deploy an application to the Kubernetes cluster. To begin your quest, you will need to install kubectl and configure it using kubeconfig file so you can access and manage your namespace in the Kubernetes cluster. Next, you will need to install Helm and, finally, use Helm to deploy. With persistence and determination, you will be able to successfully package and deploy your application to the cloud."
 summary: "In this quest, you have learned how to deploy an app to the cloud using Kubernetes and Helm, and troubleshoot a failure in the process."
 level: beginner
 steps:
