@@ -1,7 +1,7 @@
 id: kubernetes
 title: To the Cloud and Beyond
-description: "What’s worse than a bug? A bug that happens in the production environment! \nIt affects real users, who often have pitchforks and torches and would not hesitate to use them on you. Time to learn how to handle such bugs—from getting a support ticket, through bug replication, to making sure it can’t bug (ha!) anyone ever again."
-summary: "Welcome to real life - where a commit on one side of the world affects users on the other side. Most of the problems you’ll encounter won’t be as straightforward, and we’ll first need to dive into the data to analyze what exactly the problem is.\n\nFinding needles in haystacks is a crucial part of every engineer's work. No two bugs are the same, but the process by which they’re eliminated often begins with cutting and slicing data until we isolate the exact problem. Then we need to reproduce it locally as it’s the only way to know that we are fixing the problem. Finally, it’s time to fix the problem and deploy it to production. \n\nThe reproduction, by the way, can be a challenge in itself, as developing on a desktop with a stable and fast internet connection will give you the experience of a certain subset of your users. Others might use the product on a different type of device or with very limited bandwidth— circumstances that can expose bugs. Luckily, we have enough tools that let us mimic different users."
+description: "Your quest, should you choose to accept it, is to deploy an application to the Kubernetes cluster. To begin your quest, you will need to install kubectl and configure it using kubeconfig file so you can access and manage your namespace in the Kubernetes cluster. Next, you will need to install Helm and, finally, use Helm to deploy. With persistence and determination, you will be able to successfully package and deploy your application to the cloud."
+summary: "In this quest, you have learned how to access the Kubernetes cluster using kubectl and deploy using Helm."
 level: beginner
 steps:
 - kubernetes_install_kubectl
@@ -18,4 +18,5 @@ skills:
 - devops
 - kubernetes
 - cloud
-slogan: It's time for...
+slogan: The sky is NOT the limit. 
+questDependency: docker_localsetup
