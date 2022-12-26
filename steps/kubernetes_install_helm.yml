@@ -37,7 +37,7 @@ trigger:
             params:
               person: devops
               messages:
-              - text: "Mmm... That doesn't seem right. Let’s try something else, shall we?" 
+              - text: https://j.gifs.com/yXdx1J.gif
                 delay: 2500
-              - text: "And by “we”, I mean “you”. This time try doing something that actually works."
+              - text: "Mmm... That doesn't sound like "I'm ready!" to me, let's try it once more, with feelings."
                 delay: 2200
