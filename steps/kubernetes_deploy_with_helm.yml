@@ -2,26 +2,26 @@ id: kubernetes_deploy_with_helm
 learningObjectives: 
 - Use Helm to deploy to the Kubernetes cluster
 hints:
-- The command structure should be `helm install <release-name> <chart-dir> < --set key=value >`
-- You can retreive the Ingress using kubectl. Try running the command `kubectl get ingress`
+- The command structure should be `helm install <release-name> <chart-dir> < --set key=value >` 
+- You can retrieve the Ingress using kubectl. Try running the command `kubectl get ingress`
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: devops
       messages:
-      - text: "Good. Now you need to :instruction[run `helm install`]. You need to pass a few paramaters to the command:"
+      - text: "Good. Now you need to :instruction[run `helm install`]. You’ll need to pass a few parameters to the command:"
         delay: 1200
-      - text: First, **the release name**. Choose whatever you want. `anythink-market` would be a great choice.
-        delay: 800
-      - text: Second, **the path to the chart directory**. You have a prepared directory in the project root (main) folder. 
-        delay: 800
-      - text: And last, **set the values `frontend.image.tag` and `backend.image.tag` used by Helm Charts to be `${Lodash.replace(Lodash.replace(user.repository, 'https://github.com/',''), "/", "-")}-latest`**. This tells the deployment to use images that were already uploaded for you to our registry.
-        delay: 800
-      - text: If all goes well you should be able to access the application using the **[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** that is connected to the frontend.
+      - text: First, **the release name**. Choose whatever you want. `anythink-market` would be an OK choice.
         delay: 1000
-      - text: ":instruction[**Load any page in your frontend to continue.**]"
-        delay: 500      
+      - text: Second, **the path to the chart directory**. You have a prepared directory in the project root (main) folder. 
+        delay: 1100
+      - text: Lastly, **set the values `frontend.image.tag` and `backend.image.tag` used by Helm Charts to be `${Lodash.replace(Lodash.replace(user.repository, 'https://github.com/',''), "/", "-")}-latest`**. This tells the deployment to use images that were already uploaded for you to our registry. 
+        delay: 1800
+      - text: If all goes well you should be able to access the application using the **[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** that is connected to the frontend.
+        delay: 1500
+      - text: "You can just :instruction[**load any page in your frontend to continue.**]" 
+        delay: 1000    
         
 trigger:
   type: local_page_load
@@ -38,7 +38,7 @@ trigger:
           params:
             person: devops
             messages:
-            - text: It is suprising but it seems that everything is working as expected!
-              delay: 2000
+            - text: It is surprising but it seems that everything is working as expected!
+              delay: 800
         - actionId: finish_step
         

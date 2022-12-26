@@ -2,23 +2,23 @@ id: kubernetes_install_helm
 learningObjectives: 
 - Installing Helm
 hints:
-- Follow the [installation instructions](https://helm.sh/docs/intro/install/) according to the operating system. Follow the Debian/Ubuntu instructions to install on Codespaces.
+- Follow the os-specific [installation instructions](https://helm.sh/docs/intro/install/). If you’re using Codespaces, follow the Debian/Ubuntu instructions.
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: devops
       messages:
-      - text: "It is time to deploy. We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to Kubernetes."
-        delay: 1500
+      - text: "It is time to deploy! We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to K8s clusters."
+        delay: 1000
       - text: "First, we need to :instruction[[install Helm](https://helm.sh/docs/intro/install/)]"
-        delay: 500
+        delay: 1000
       - text: You should be able to run `helm` without `sudo`. If you use the `get_helm.sh` script, make sure to pass `--no-sudo` as an argument.
-        delay: 700
-      - text: :instruction[Run `helm version` after the installation to verify it was successful.]
-        delay: 1500
-      - text: :instruction[**Let me know once you've finished installing and you're ready to continue.**]
-        delay: 1200
+        delay: 1100
+      - text: :instruction[Run `helm version` after the installation to verify it was successful.] 
+        delay: 800
+      - text: :instruction[**Let me know once you've finished installing and are ready to continue.**] 
+        delay: 800
         
 trigger:
   type: user_message
@@ -37,5 +37,7 @@ trigger:
             params:
               person: devops
               messages:
-              - text: Umm, If you need any help, just let me know that you're stuck. If that's not the case - take your time and tell me once you're ready :)
+              - text: https://j.gifs.com/yXdx1J.gif
+                delay: 600
+              - text: "Mmm... That doesn't sound like "I'm ready!" to me. So let's try it once more, with feelings."
                 delay: 1000
