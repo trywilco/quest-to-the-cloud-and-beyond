@@ -14,13 +14,13 @@ startFlow:
         delay: 1600
       - text: First, **the release name**. Choose whatever you want. `anythink-market` would be an OK choice.
         delay: 2500
-      - text:  Second, **the path to the chart directory**. You have a prepared directory in the project root (main) folder. 
+      - text: Second, **the path to the chart directory**. You have a prepared directory in the project root (main) folder. 
         delay: 2500
       - text: Lastly, **set the values `frontend.image.tag` and `backend.image.tag` used by Helm Charts to be `${Lodash.replace(Lodash.replace(user.repository, 'https://github.com/',''), "/", "-")}-latest`**. This tells the deployment to use images that were already uploaded for you to our registry. 
         delay: 3000
-      - text:  If all goes well you should be able to access the application using the **[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** that is connected to the frontend.
+      - text: If all goes well you should be able to access the application using the **[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** that is connected to the frontend.
         delay: 4500
-      - text:  "You can just :instruction[**load any page in your frontend to continue.**]" 
+      - text: "You can just :instruction[**load any page in your frontend to continue.**]" 
         delay: 1900    
         
 trigger:
