@@ -25,8 +25,8 @@ messages:
     person: devops
     messages:
     - text: Well then, I think this is it. You can look up some compliments in the dictionary and imagine I said them.
-      delay: 2000
+      delay: 1200
     - text: Or, if you think you can be useful elsewhere, I believe there’s another project waiting for you.
-      delay: 3000
+      delay: 1000
       components:
       - type: schedule_learning_time
