@@ -20,6 +20,7 @@ skills:
 - cloud
 slogan: The sky is NOT the limit. 
 questDependency: docker_localsetup
+messages:
 questFinished:
   person: devops
   messages:
