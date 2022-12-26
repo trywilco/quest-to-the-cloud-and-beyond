@@ -20,14 +20,14 @@ skills:
 - cloud
 slogan: The sky is NOT the limit. 
 questDependency: docker_localsetup
-  questFinished:
-    person: devops
-    messages:
-    - text: Well then, I think this is it. 
-      delay: 2000
-    - text: If you're waiting for any words of approval, you can ask chatGPT to write you some compliments and imagine I said them.
-      delay: 3000
-    - text: Or, if you think you can be useful elsewhere, I believe there’s another project waiting for you.
-      delay: 3000
-      components:
-      - type: schedule_learning_time
+questFinished:
+  person: devops
+  messages:
+  - text: Well then, I think this is it. 
+    delay: 2000
+  - text: If you're waiting for any words of approval, you can ask chatGPT to write you some compliments and imagine I said them.
+    delay: 3000
+  - text: Or, if you think you can be useful elsewhere, I believe there’s another project waiting for you.
+    delay: 3000
+    components:
+    - type: schedule_learning_time
