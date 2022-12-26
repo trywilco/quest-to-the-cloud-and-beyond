@@ -2,21 +2,27 @@ id: kubernetes_install_kubectl
 learningObjectives: 
 - Installing kubectl
 hints:
-- To install kubectl on codespaces, follow the instructions for Linux Debian-based distributions
+- To install kubectl on codespaces, follow the [instructions for Linux Debian-based distributions](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/).
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: devops
       messages:
-      - text: "Now it is time to deploy to our Kubernetes cluster. You must be wondering how are we going to do that."
+      - text: "You haven’t been with us for a long time, but I believe it’s time to let you into our cloud environment. "
         delay: 1200        
-      - text: "Well, the first thing you need is to install [kubectl](https://kubernetes.io/docs/tasks/tools/). We use kubectl run commands against the Kubernetes cluster."
-        delay: 1000
-      - text: "It will all make sense really soon. But first, make sure kubectl is installed and working. Run `kubectl help` and make sure the list of supported commands is printed."
-        delay: 1000
-      - text: ":instruction[Let me know once you finished installing and ready to continue]"
-        delay: 800
+      - text: "Not only that, you’re about to deploy to our Kubernetes cluster."
+        delay: 2200
+      - text: "Also, I’ll be **referring to it as K8s** from now on, because short terms are, well, shorter, and easier to write."
+        delay: 3000
+      - text: "Fun fact, it’s called K8s because there are 8 letters between the “K” and the “s” in Kubernetes."
+        delay: 4000
+      - text: "The first thing you need is to :instruction[install [kubectl](https://kubernetes.io/docs/tasks/tools/)]. Know that **we use kubectl run commands against the K8s cluster.**"
+        delay: 3500
+      - text: "If it doesn’t make sense, don’t worry, it will really soon. But first, **make sure kubectl is installed and working**. Run `kubectl help` and make sure the list of supported commands is printed."
+        delay: 5000
+      - text: ":instruction[Let me know once you’ve finished installing and are ready to continue]" 
+        delay: 2500
                 
 trigger:
   type: user_message
@@ -35,5 +41,5 @@ trigger:
             params:
               person: devops
               messages:
-              - text: Umm, If you need any help, just let me know that you’re stuck. If that’s not the case - take your time and tell me once you're ready :)
-                delay: 1000
+              - text: Umm, If you need any help, just let me know that you’re **stuck**. If that’s not the case, take your time and tell me once you're ready :)
+                delay: 1300
