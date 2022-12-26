@@ -39,5 +39,5 @@ trigger:
               messages:
               - text: https://j.gifs.com/yXdx1J.gif
                 delay: 2500
-              - text: "Mmm... That doesn't sound like "I'm ready!" to me, let's try it once more, with feelings."
+              - text: "Mmm... That doesn't sound like "I'm ready!" to me. So let's try it once more, with feelings."
                 delay: 2200
