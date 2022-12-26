@@ -10,15 +10,15 @@ startFlow:
       person: devops
       messages:
       - text: "It is time to deploy! We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to K8s clusters."
-        delay: 1500
+        delay: 1000
       - text: "First, we need to :instruction[[install Helm](https://helm.sh/docs/intro/install/)]"
-        delay: 2000
+        delay: 1000
       - text: You should be able to run `helm` without `sudo`. If you use the `get_helm.sh` script, make sure to pass `--no-sudo` as an argument.
-        delay: 3500
+        delay: 1100
       - text: :instruction[Run `helm version` after the installation to verify it was successful.] 
-        delay: 2500
+        delay: 800
       - text: :instruction[**Let me know once you've finished installing and are ready to continue.**] 
-        delay: 2500
+        delay: 800
         
 trigger:
   type: user_message
@@ -38,6 +38,6 @@ trigger:
               person: devops
               messages:
               - text: https://j.gifs.com/yXdx1J.gif
-                delay: 2500
+                delay: 600
               - text: "Mmm... That doesn't sound like "I'm ready!" to me. So let's try it once more, with feelings."
-                delay: 2200
+                delay: 1000
