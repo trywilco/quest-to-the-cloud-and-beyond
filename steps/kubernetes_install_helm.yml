@@ -2,23 +2,23 @@ id: kubernetes_install_helm
 learningObjectives: 
 - Installing Helm
 hints:
-- Follow the [installation instructions](https://helm.sh/docs/intro/install/) according to the operating system. Follow the Debian/Ubuntu instructions to install on Codespaces.
+- Follow the os-specific [installation instructions](https://helm.sh/docs/intro/install/). If you’re using Codespaces, follow the Debian/Ubuntu instructions.
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: devops
       messages:
-      - text: "It is time to deploy. We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to Kubernetes."
+      - text: "It is time to deploy! We will use [Helm](https://helm.sh/) for that. Helm automates the complex process of deploying applications to K8s clusters."
         delay: 1500
       - text: "First, we need to :instruction[[install Helm](https://helm.sh/docs/intro/install/)]"
-        delay: 500
+        delay: 2000
       - text: You should be able to run `helm` without `sudo`. If you use the `get_helm.sh` script, make sure to pass `--no-sudo` as an argument.
-        delay: 700
-      - text: :instruction[Run `helm version` after the installation to verify it was successful.]
-        delay: 1500
-      - text: :instruction[**Let me know once you've finished installing and you're ready to continue.**]
-        delay: 1200
+        delay: 3500
+      - text: :instruction[Run `helm version` after the installation to verify it was successful.] 
+        delay: 2500
+      - text: :instruction[**Let me know once you've finished installing and are ready to continue.**] 
+        delay: 2500
         
 trigger:
   type: user_message
@@ -37,5 +37,7 @@ trigger:
             params:
               person: devops
               messages:
-              - text: Umm, If you need any help, just let me know that you're stuck. If that's not the case - take your time and tell me once you're ready :)
-                delay: 1000
+              - text: "Mmm... That doesn't seem right. Let’s try something else, shall we?" 
+                delay: 2500
+              - text: "And by “we”, I mean “you”. This time try doing something that actually works."
+                delay: 2200
