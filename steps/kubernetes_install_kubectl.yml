@@ -17,7 +17,7 @@ startFlow:
         delay: 3000
       - text: "Fun fact, it’s called K8s because there are 8 letters between the “K” and the “s” in Kubernetes."
         delay: 4000
-      - text: "The first thing you need is to :instruction[install [kubectl](https://kubernetes.io/docs/tasks/tools/)]. Know that **we use kubectl run commands against the K8s cluster.**"
+      - text: "The first thing you need is to :instruction[install [kubectl](https://kubernetes.io/docs/tasks/tools/)]. Know that **we use kubectl to run commands against the K8s cluster.**"
         delay: 3500
       - text: "If it doesn’t make sense, don’t worry, it will really soon. But first, **make sure kubectl is installed and working**. Run `kubectl help` and make sure the list of supported commands is printed."
         delay: 5000
