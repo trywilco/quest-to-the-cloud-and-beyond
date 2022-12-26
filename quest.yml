@@ -1,7 +1,7 @@
 id: kubernetes
 title: To the Cloud and Beyond
-description: "Your quest, should you choose to accept it, is to deploy an application to the Kubernetes cluster. To begin your quest, you will need to install kubectl and configure it using kubeconfig file so you can access and manage your namespace in the Kubernetes cluster. Next, you will need to install Helm and, finally, use Helm to deploy. With persistence and determination, you will be able to successfully package and deploy your application to the cloud."
-summary: "In this quest, you have learned how to access the Kubernetes cluster using kubectl and deploy using Helm."
+description: "Your quest, should you choose to accept it, is to deploy an application to the Kubernetes cluster. That way, you will be able to run it from the cloud rather than just locally — an important thing if you want to delegate things like uptime and resources management to a company that specializes in that."
+summary: "In this quest, you have learned how to access the Kubernetes cluster using kubectl and deploy using Helm/"
 level: beginner
 steps:
 - kubernetes_install_kubectl
@@ -20,3 +20,14 @@ skills:
 - cloud
 slogan: The sky is NOT the limit. 
 questDependency: docker_localsetup
+  questFinished:
+    person: devops
+    messages:
+    - text: Well then, I think this is it. 
+      delay: 2000
+    - text: If you're waiting for any words of approval, you can ask chatGPT to write you some compliments and imagine I said them.
+      delay: 3000
+    - text: Or, if you think you can be useful elsewhere, I believe there’s another project waiting for you.
+      delay: 3000
+      components:
+      - type: schedule_learning_time
