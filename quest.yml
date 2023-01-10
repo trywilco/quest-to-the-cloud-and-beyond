@@ -26,7 +26,7 @@ messages:
     messages:
     - text: Well then, I think this is it. You can look up some compliments in the dictionary and imagine I said them.
       delay: 1200
-    - text: Or, if you think you can be useful elsewhere, I believe there’s another project waiting for you.
+    - text: Or, if you think you can be useful elsewhere, choose your next assignment: 
       delay: 1000
       components:
       - type: schedule_learning_time
