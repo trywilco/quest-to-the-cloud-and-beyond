@@ -10,7 +10,7 @@ startFlow:
     params:
       person: devops
       messages:
-      - text: "Good. Now you need to :instruction[run `helm install`]. You’ll need to pass a few parameters to the command:"
+      - text: "Good. Now you need to :instruction[run `helm upgrade --instal`]. You can also run `helm install` but the command will fail the second time if charts are already installed. You’ll need to pass a few parameters to the command:"
         delay: 1200
       - text: First, **the release name**. Choose whatever you want. `anythink-market` would be an OK choice.
         delay: 1000
@@ -18,7 +18,7 @@ startFlow:
         delay: 1100
       - text: Lastly, **set the values `frontend.image.tag` and `backend.image.tag` used by Helm Charts to be `${Lodash.replace(Lodash.replace(user.repository, 'https://github.com/',''), "/", "-")}-latest`**. This tells the deployment to use images that were already uploaded for you to our registry. 
         delay: 1800
-      - text: If all goes well you should be able to access the application using the **[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** that is connected to the frontend.
+      - text: If all goes well you should be able to access the application using the **[Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)** that is connected to the frontend. There are two ingress hosts. The one connect to the frontend does not have `api` in its URL.
         delay: 1500
       - text: "You can just :instruction[**load any page in your frontend to continue.**]" 
         delay: 1000    
