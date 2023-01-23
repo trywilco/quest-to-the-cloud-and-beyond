@@ -10,7 +10,7 @@ startFlow:
     params:
       person: devops
       messages:
-      - text: "Good. Now you need to :instruction[run `helm upgrade --instal`]. You can also run `helm install` but the command will fail the second time if charts are already installed. You’ll need to pass a few parameters to the command:"
+      - text: "Good. Now you need to :instruction[run `helm upgrade --install`]. You can also run `helm install` but the command will fail the second time if charts are already installed. You’ll need to pass a few parameters to the command:"
         delay: 1200
       - text: First, **the release name**. Choose whatever you want. `anythink-market` would be an OK choice.
         delay: 1000
