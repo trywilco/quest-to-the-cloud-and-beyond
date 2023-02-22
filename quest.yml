@@ -1,5 +1,6 @@
 id: kubernetes
 title: To the Cloud and Beyond
+subtitle: Deploy an application to a Kubernetes cluster using kubectl & Helm
 description: "Your quest, should you choose to accept it, is to deploy an application to the Kubernetes cluster. That way, you will be able to run it from the cloud rather than just locally. This is what we call: deploying your code to production!"
 summary: "In this quest, you have learned how to access the Kubernetes cluster using kubectl and deploy using Helm."
 level: beginner
