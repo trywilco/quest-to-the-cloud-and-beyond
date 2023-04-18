@@ -23,23 +23,6 @@ startFlow:
         delay: 1500
       - text: ":instruction[Let me know once you’ve finished installing and are ready to continue]" 
         delay: 1000
-                
-trigger:
-  type: user_message
-  params:
-    person: devops
-  flowNode:
-    if:
-      conditions:
-        - conditionId: is_user_message_text_ready_to_continue
-      then:
-        do:
-          - actionId: finish_step
-      else:
-        do:
-          - actionId: bot_message
-            params:
-              person: devops
-              messages:
-              - text: Umm, If you need any help, just let me know that you’re **stuck**. If that’s not the case, take your time and tell me once you're ready :)
-                delay: 1300
+  - actionId: ready_message
+    params:
+      person: head-of-rd
