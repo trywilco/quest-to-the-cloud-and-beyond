@@ -26,3 +26,8 @@ startFlow:
   - actionId: ready_message
     params:
       person: head-of-rd
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
