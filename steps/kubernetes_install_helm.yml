@@ -21,7 +21,7 @@ startFlow:
         delay: 800
   - actionId: ready_message
     params:
-      person: head-of-rd
+      person: devops
 trigger:
   type: user_ready_response
   flowNode:
