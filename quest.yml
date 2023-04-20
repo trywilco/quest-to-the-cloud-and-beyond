@@ -20,6 +20,7 @@ skills:
 - cloud
 slogan: The sky is NOT the limit. 
 questDependency: docker_localsetup
+repository: https://github.com/trywilco/Anythink-Market-Public
 messages:
   questFinished:
     person: devops
